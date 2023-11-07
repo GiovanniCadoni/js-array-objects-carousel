@@ -1,5 +1,31 @@
 //Dichiarazione e inizializzazione delle variabili
-const images = ["./img/01.webp", "./img/02.webp", "./img/03.webp", "./img/04.webp", "./img/05.webp"];
+const images = [
+    {
+        link: "./img/01.webp",
+        name: "Spider-Man Miles Morales",
+        description: "A war for control of Marvel's New York has broken out between a devious energy corporation and a high-tech criminal army." 
+    },
+    {
+        link: "./img/02.webp",
+        name: "Ratchet & Clank: Rift Apart",
+        description: "The intergalactic adventurers are back with a bang in Ratchet & Clank: Rift Apart!",
+    },
+    {
+        link: "./img/03.webp",
+        name: "Fortnite",
+        description: "Fortnite is a third-person shooter game where up to 100 players compete to be the last person or team standing."
+    },
+    {
+        link: "./img/04.webp",
+        name: "Stray",
+        description: "Lost, alone and separated from family, a stray cat must untangle an ancient mystery to escape a long-forgotten city."
+    },
+    { 
+        link: "./img/05.webp",
+        name: "Marvel's Avengers",
+        description: "Marvel's Avengers is a third-person, action-adventure game. It features an original story with single-player and co-operative gameplay."
+    },
+];
 console.log(images);
 
 const imgCarousel = document.querySelector(".items");
@@ -11,7 +37,16 @@ let imgString = "";
 for (let i = 0; i < images.length; i++)
 {
     const curImg = images[i];
-    imgString += `<div class="item"> <img src="${curImg}" alt=""> </div>`;
+    imgString += `
+    <div class="item"> 
+        <img class="banner" src="${curImg.link}" alt="">
+        <h2 class="title">
+            ${curImg.name}
+        </h2>
+        <p class="info">
+            ${curImg.description}
+        </p>
+    </div>`;
 }
 
 //Aggiunta dei bottoni

@@ -105,3 +105,24 @@
     left: 50%;
     transform: translate(-50%) rotate(135deg);
 }
+
+.banner{
+    position: relative;
+}
+
+.title{
+    position: absolute;
+    text-align: right;
+    right: 20px;
+    bottom: 60px;
+    color: white;
+}
+
+.info{
+    position: absolute;
+    text-align: right;
+    right: 20px;
+    bottom: 20px;
+    color: white;
+    width: 70%;
+}
